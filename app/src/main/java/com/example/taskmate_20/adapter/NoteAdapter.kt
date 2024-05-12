@@ -2,6 +2,7 @@ package com.example.taskmate_20.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -46,9 +47,10 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>(){
         holder.itemBinding.noteTitle.text = currentNote.noteTitle
         holder.itemBinding.noteDesc.text = currentNote.noteDesc
 
-//        holder.itemView.setOnClickListener {
-//            val direction = HomeFragment.action
-//        }
+        holder.itemView.setOnClickListener {
+            val direction = HomeFragmentDirections.actionHomeFragmentToEditNoteFragment(currentNote)
+            it.findNavController().navigate(direction)
+        }
     }
 
 

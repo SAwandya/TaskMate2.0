@@ -2,45 +2,109 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/secondary_bg_color"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".NewNoteFragment"
         android:padding="12dp">
+
+
         <TextView
             android:id="@+id/addNoteHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="12dp"
             android:text="Add Note."
-            android:textStyle="bold"
-            android:textColor="@color/red"
-            android:textSize="24sp" />
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/addNoteTitle"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:hint="Enter the title"
-            android:padding="12dp"
-            android:textSize="20sp"
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/addNoteHeading"
-            android:background="@drawable/pink_border"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:hint="Enter the title"
             android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textDirection="firstStrong"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@drawable/input_shape"
             />
+
         <EditText
             android:id="@+id/addNoteDesc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Enter the description"
-            android:gravity="top"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:background="@drawable/pink_border"
             android:layout_below="@id/addNoteTitle"
-            android:layout_marginTop="12dp" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/input_shape"
+            android:gravity="top"
+            android:hint="Enter the description"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="29dp"
+            android:background="#131313"
+            android:visibility="visible"
+            app:srcCompat="@drawable/baseline_add_24"
+            tools:visibility="visible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editNoteFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/pink"
+            android:clickable="true"
+            android:contentDescription="editFab"
+            android:src="@drawable/baseline_done_24"
+            android:tintMode="@color/white" />
+
+        <TextView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:text="Add new note"
+            />
+
     </RelativeLayout>
 </layout>
